@@ -415,7 +415,7 @@ function loadCo(){
 
 // TAB 2
 let curM='grossMargin',mktF2='全部';
-const sel2=new Set(DATA.map(c=>c.name));
+const sel2=new Set(['VIS']);
 
 function buildList(){
   const el=document.getElementById('cList');el.innerHTML='';
@@ -463,12 +463,13 @@ function setM(m,btn){
 function renderComp(){
   const sel=DATA.filter(c=>sel2.has(c.name));
   if(!sel.length){dc('comp');return;}
-  const parseQ=q=>{const[qt,yr]=q.split("'");return parseInt(yr)*10+(qt==='Q1'?1:qt==='Q2'?2:qt==='Q3'?3:4);};
-  const allQ=[...new Set(sel.flatMap(c=>c.quarters))].sort((a,b)=>parseQ(a)-parseQ(b));
+  const normQ=q=>q.replace('(FY)','');
+  const parseQ=q=>{const nq=normQ(q);const[qt,yr]=nq.split("'");return parseInt(yr)*10+(qt==='Q1'?1:qt==='Q2'?2:qt==='Q3'?3:4);};
+  const allQ=[...new Set(sel.flatMap(c=>c.quarters.map(normQ)))].sort((a,b)=>parseQ(a)-parseQ(b));
   const ds=sel.map((c,i)=>{
-    const data=allQ.map(q=>{const idx=c.quarters.indexOf(q);return idx>=0?(c[curM][idx]??null):null;});
+    const data=allQ.map(q=>{const idx=c.quarters.findIndex(cq=>normQ(cq)===q);return idx>=0?(c[curM][idx]??null):null;});
     const col=PAL[i%PAL.length];
-    return{label:c.name,data,borderColor:col,backgroundColor:col+'22',borderWidth:2,pointRadius:3,pointHoverRadius:5,fill:false,tension:.3};
+    return{label:c.name,data,borderColor:col,backgroundColor:col+'22',borderWidth:2,pointRadius:3,pointHoverRadius:5,fill:false,tension:.3,spanGaps:true};
   });
   dc('comp');
   const suf=curM==='grossMargin'?'%':'';
