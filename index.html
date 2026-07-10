@@ -1046,7 +1046,7 @@ function renderCCC(){
   }
   const hasDpo=row.dpo!=null;
   const ccc=(row.dsi||0)+(row.dso||0)-(row.dpo||0);
-  document.getElementById('ccNote').textContent='資料季度：'+row.quarter+(row.source?('（'+row.source+'）'):'')+(hasDpo?'':' ⚠️ 該季無應付帳款天數(DPO)資料（台股僅近5季有），CCC暫以0計算');
+  document.getElementById('ccNote').textContent='資料季度：'+row.quarter+'（'+(row.source||'mopsfin.twse.com.tw 官方，台股')+'）'+(hasDpo?'':' ⚠️ 該季無應付帳款天數(DPO)資料（台股僅近5季有），CCC暫以0計算');
   const maxDay=Math.max(120,Math.ceil(Math.max(ccc,row.dsi||0,row.dso||0,row.dpo||0)/60)*60);
   const items=[['gCCC','gvCCC','gmCCC',ccc],['gDSI','gvDSI','gmDSI',row.dsi],['gDSO','gvDSO','gmDSO',row.dso],['gDPO','gvDPO','gmDPO',row.dpo]];
   items.forEach(([gid,vid,mid,v])=>{
@@ -1101,7 +1101,7 @@ function renderFinStruct(){
     document.getElementById('bsBody').innerHTML='';document.getElementById('bsNote').textContent='';
     return;
   }
-  document.getElementById('fsNote').textContent='資料季度：'+row.quarter+(row.source?('（'+row.source+'）'):'');
+  document.getElementById('fsNote').textContent='資料季度：'+row.quarter+'（'+(row.source||'mopsfin.twse.com.tw 官方，台股')+'）';
   gauge('gDebt',row.debtRatio,100,'#d64545');
   document.getElementById('gvDebt').textContent=row.debtRatio!=null?row.debtRatio.toFixed(1)+'%':'—';
   const ratioMax=Math.max(300,Math.ceil(Math.max(row.currentRatio||0,row.quickRatio||0)/100)*100);
@@ -1120,7 +1120,7 @@ function renderFinStruct(){
     ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
     return;
   }
-  document.getElementById('bsNote').textContent='季度：'+row.quarter+'，單位 US$M（mopsfin 官方原始金額換算）。';
+  document.getElementById('bsNote').textContent='季度：'+row.quarter+'，單位 US$M。來源：'+(row.source||'mopsfin.twse.com.tw（官方原始金額換算，台股）');
   charts['bs']=new Chart(document.getElementById('cBS').getContext('2d'),{
     type:'bar',
     data:{labels:['資產','負債＋權益'],datasets:[
