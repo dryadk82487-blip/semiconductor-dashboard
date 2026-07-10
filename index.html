@@ -945,10 +945,15 @@ function renderFulu(){
   function extraCard(label,key){
     const hit=findQ(c.quarters[L]);
     const v=hit?hit[key]:null;
-    const fallback=(v==null)?series.find(it=>it[key]!=null):null;
     const spark=qs.map(q=>{const e=findQ(q);return e?e[key]:null;});
-    const val=v!=null?v.toFixed(1)+'%':(fallback?fallback[key].toFixed(1)+'%（'+fallback.quarter+'）':'—');
-    const src=hit?('季度：'+hit.quarter+' ／ 來源：'+hit.source):(fallback?('該季無資料，顯示最近可得 '+fallback.quarter+' ／ '+fallback.source):'查無資料');
+    const val=v!=null?v.toFixed(1)+'%':'—';
+    let src;
+    if(hit){
+      src='季度：'+hit.quarter+' ／ 來源：'+hit.source;
+    }else{
+      const fallback=series.find(it=>it[key]!=null);
+      src=fallback?('本季無資料，最近可得：'+fallback.quarter+' '+fallback[key].toFixed(1)+'%（'+fallback.source+'）'):'查無資料';
+    }
     const glossary=key==='ebitdaMargin'?'EBITDA(%) = (稅前息前折舊攤銷前淨利／營收)，衡量本業現金獲利能力，排除資本結構與折舊政策的影響。':'';
     return {label,val,data:spark,color:neu,title:(glossary?glossary+' ':'')+src};
   }
@@ -981,24 +986,25 @@ function renderFulu(){
 }
 
 // 綜合損益瀑布圖（fuludata 配色：收入=藍綠、支出=紅、小計=藍）
+// 只有「所選季度」同時有營業利益率與稅後淨利率才畫圖，不借用其他季度的比率套用在本季營收上（避免誤導）
 function renderWaterfall(c,L){
   const rev=(c.revenueUSD||c.revenue)[L];
   const gm=c.grossMargin[L];
   const series=(PROFITEXTRA.companies[c.name]||[]);
-  let extra=series.find(it=>nq(it.quarter)===nq(c.quarters[L])&&it.opMargin!=null&&it.netMargin!=null);
-  let extraNote='';
-  if(!extra){
-    extra=series.find(it=>it.opMargin!=null&&it.netMargin!=null);
-    if(extra)extraNote='⚠️ 所選季度('+c.quarters[L]+')無營業利益率/淨利率資料，改用最近可得 '+extra.quarter+' 的比率估算；';
-  }
+  const extra=series.find(it=>nq(it.quarter)===nq(c.quarters[L])&&it.opMargin!=null&&it.netMargin!=null);
   dc('wf');
+  const ctx=document.getElementById('cWaterfall').getContext('2d');
+  ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
   if(rev==null||gm==null||!extra){
-    document.getElementById('wfNote').textContent='此公司/季度缺營收、毛利率或營業利益率/稅後淨利率資料，暫無法拼出瀑布圖。';
-    const ctx=document.getElementById('cWaterfall').getContext('2d');
-    ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
+    const hasOp=series.some(it=>it.opMargin!=null),hasNet=series.some(it=>it.netMargin!=null);
+    let why='此季度沒有同時查到營業利益率與稅後淨利率，無法拼出完整損益結構。';
+    if(!hasOp&&!hasNet)why='目前完全沒有查到這家公司的營業利益率／稅後淨利率資料。';
+    else if(!hasNet)why='目前完全沒有查到這家公司的稅後淨利率資料（只有部分季度的營業利益率）。';
+    else if(!hasOp)why='目前完全沒有查到這家公司的營業利益率資料。';
+    document.getElementById('wfNote').innerHTML='<div style="padding:16px 18px;background:#f7f8fa;border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;font-size:13px;line-height:1.6">📊 暫無法顯示綜合損益瀑布圖<br><span style="font-size:12px">'+esc(why)+'</span></div>';
     return;
   }
-  document.getElementById('wfNote').textContent=extraNote+'季度：'+c.quarters[L]+'，單位 US$M（比率來源：'+extra.source+'）';
+  document.getElementById('wfNote').textContent='季度：'+c.quarters[L]+'，單位 US$M（比率來源：'+extra.source+'）';
   const grossProfit=rev*gm/100;
   const opIncome=rev*extra.opMargin/100;
   const netIncome=rev*extra.netMargin/100;
