@@ -1038,7 +1038,13 @@ function initCCCSelect(){
   DATA.forEach(c=>{const o=document.createElement('option');o.value=c.name;o.textContent=c.name+' ('+c.market+')';s.appendChild(o);});
   populateCCQuarters();
 }
-function bsSeriesOf(name){return (BALANCESERIES.companies[name]||[]).filter(x=>x);}
+function bsSeriesOf(name){
+  const raw=(BALANCESERIES.companies[name]||[]).filter(x=>x);
+  const c=DATA.find(d=>d.name===name);
+  if(!c)return raw;
+  const byQ={};raw.forEach(r=>{byQ[r.quarter]=r;});
+  return [...c.quarters].reverse().map(q=>byQ[q]).filter(Boolean);
+}
 function populateCCQuarters(){
   const name=document.getElementById('ccCoS').value||DATA[0].name;
   const qsel=document.getElementById('ccQS');const prev=qsel.value;
