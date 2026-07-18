@@ -1310,7 +1310,8 @@ function renderFulu(){
     const hit=findQ(c.quarters[L]);
     const v=hit?hit[key]:null;
     const spark=qs.map(q=>{const e=findQ(q);return e?e[key]:null;});
-    const val=v!=null?v.toFixed(1)+'%':'—';
+    const flagged=hit&&hit.source&&hit.source.indexOf('【注意')>=0;
+    const val=v!=null?(v.toFixed(1)+'%'+(flagged?' ⚠️':'')):'—';
     let src;
     if(hit){
       src='季度：'+hit.quarter+' ／ 來源：'+hit.source;
