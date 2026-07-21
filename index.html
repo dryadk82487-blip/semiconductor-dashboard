@@ -11,35 +11,35 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}
 .hd{background:linear-gradient(135deg,#1a2332,#0F172A);border-bottom:1px solid var(--border);padding:18px 32px;display:flex;align-items:center;gap:14px}
-.hd h1{font-size:20px;font-weight:700}.hd p{font-size:12px;color:var(--muted);margin-top:2px}
+.hd h1{font-size:21px;font-weight:700}.hd p{font-size:13px;color:var(--muted);margin-top:2px}
 .hd-r{margin-left:auto;display:flex;gap:8px;flex-wrap:wrap}
-.badge{background:var(--card2);border:1px solid var(--border);padding:3px 10px;border-radius:20px;font-size:12px;color:var(--muted)}
+.badge{background:var(--card2);border:1px solid var(--border);padding:3px 10px;border-radius:20px;font-size:13px;color:var(--muted)}
 .badge-update{background:rgba(59,130,246,.12);border-color:rgba(59,130,246,.35);color:#93C5FD}
 .tabs{display:flex;padding:0 32px;background:var(--card);border-bottom:1px solid var(--border)}
-.tab{padding:13px 22px;cursor:pointer;font-size:14px;font-weight:500;color:var(--muted);border-bottom:2px solid transparent;transition:all .2s}
+.tab{padding:13px 22px;cursor:pointer;font-size:15px;font-weight:500;color:var(--muted);border-bottom:2px solid transparent;transition:all .2s}
 .tab.active{color:var(--blue);border-bottom-color:var(--blue)}
 .tab:hover:not(.active){color:var(--text)}
 .content{padding:22px 32px;max-width:1600px;margin:0 auto}
 .sel-row{display:flex;gap:14px;margin-bottom:18px;align-items:flex-end;flex-wrap:wrap}
 .sg{display:flex;flex-direction:column;gap:5px}
-.sg label{font-size:12px;color:var(--muted)}
-select{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:7px 12px;border-radius:8px;font-size:13px;cursor:pointer;outline:none;min-width:180px}
+.sg label{font-size:13px;color:var(--muted)}
+select{background:var(--card2);border:1px solid var(--border);color:var(--text);padding:7px 12px;border-radius:8px;font-size:14px;cursor:pointer;outline:none;min-width:180px}
 select:focus{border-color:var(--blue)}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}
 .sc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px 18px;transition:border-color .15s}
 .sc:hover{border-color:#475569}
-.sc-lbl{font-size:11px;color:var(--muted);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px}
-.sc-val{font-size:30px;font-weight:800;letter-spacing:-.3px}
-.sc-sub{font-size:12px;color:var(--muted);margin-top:3px}
-.sc-d{font-size:12px;font-weight:500;margin-top:3px}
+.sc-lbl{font-size:12px;color:var(--muted);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px}
+.sc-val{font-size:31px;font-weight:800;letter-spacing:-.3px}
+.sc-sub{font-size:13px;color:var(--muted);margin-top:3px}
+.sc-d{font-size:13px;font-weight:500;margin-top:3px}
 /* 台灣習慣：漲=紅、跌=綠 */
 .up{color:var(--red)}.dn{color:var(--green)}
 .cg{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
 .cf{grid-column:1/-1}
 .cc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px 22px;transition:border-color .15s}
 .cc:hover{border-color:#475569}
-.ct{font-size:14px;font-weight:600;margin-bottom:3px}
-.cs{font-size:12px;color:var(--muted);margin-bottom:14px}
+.ct{font-size:15px;font-weight:600;margin-bottom:3px}
+.cs{font-size:13px;color:var(--muted);margin-bottom:14px}
 .cw{position:relative;height:220px}
 .cwt{position:relative;height:280px}
 /* Analysis panels */
@@ -49,85 +49,85 @@ select:focus{border-color:var(--blue)}
 .apanel-hd{display:flex;align-items:center;gap:8px;padding:12px 16px;cursor:pointer;user-select:none;border-bottom:1px solid transparent;transition:background .15s}
 .apanel-hd:hover{background:var(--card2)}
 .apanel-hd.open{border-bottom-color:var(--border)}
-.apanel-icon{font-size:16px}
-.apanel-title{font-size:13px;font-weight:600;flex:1}
-.apanel-sub{font-size:11px;color:var(--muted)}
-.apanel-arrow{font-size:12px;color:var(--muted);transition:transform .2s}
+.apanel-icon{font-size:17px}
+.apanel-title{font-size:14px;font-weight:600;flex:1}
+.apanel-sub{font-size:12px;color:var(--muted)}
+.apanel-arrow{font-size:13px;color:var(--muted);transition:transform .2s}
 .apanel-hd.open .apanel-arrow{transform:rotate(180deg)}
-.apanel-body{display:none;padding:14px 16px;font-size:13px;line-height:1.7;color:#cdd9e5}
+.apanel-body{display:none;padding:14px 16px;font-size:14px;line-height:1.7;color:#cdd9e5}
 .apanel-body.show{display:block}
 .apanel-body p{margin-bottom:10px}
 .bullet-list{list-style:none;display:flex;flex-direction:column;gap:6px}
 .bullet-list li{padding-left:4px;border-left:2px solid var(--blue)}
-.core-box{background:var(--card2);border-left:3px solid var(--orange);padding:8px 12px;border-radius:4px;margin-bottom:10px;font-size:12px;color:var(--orange);line-height:1.5}
+.core-box{background:var(--card2);border-left:3px solid var(--orange);padding:8px 12px;border-radius:4px;margin-bottom:10px;font-size:13px;color:var(--orange);line-height:1.5}
 /* Tab2 */
 .cl{display:grid;grid-template-columns:250px 1fr;gap:22px;align-items:start}
 .panel{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:18px}
-.pt{font-size:11px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px}
-.mb{display:block;width:100%;text-align:left;padding:8px 12px;border-radius:7px;border:1px solid transparent;background:transparent;color:var(--muted);font-size:13px;cursor:pointer;margin-bottom:3px;transition:all .15s}
+.pt{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px}
+.mb{display:block;width:100%;text-align:left;padding:8px 12px;border-radius:7px;border:1px solid transparent;background:transparent;color:var(--muted);font-size:14px;cursor:pointer;margin-bottom:3px;transition:all .15s}
 .mb:hover{background:var(--card2);color:var(--text)}
 .mb.active{background:var(--card2);border-color:var(--blue);color:var(--blue)}
 .clist{max-height:460px;overflow-y:auto}
 .ci{display:flex;align-items:center;gap:8px;padding:6px 3px;cursor:pointer;border-radius:5px;transition:background .1s}
 .ci:hover{background:var(--card2)}
 .ci input{accent-color:var(--blue);width:14px;height:14px;cursor:pointer}
-.ci-n{font-size:13px;flex:1}
+.ci-n{font-size:14px;flex:1}
 .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 .srow{display:flex;gap:7px;margin-bottom:10px}
-.mbtn{padding:3px 9px;border-radius:5px;font-size:12px;border:1px solid var(--border);background:var(--card2);color:var(--muted);cursor:pointer}
+.mbtn{padding:3px 9px;border-radius:5px;font-size:13px;border:1px solid var(--border);background:var(--card2);color:var(--muted);cursor:pointer}
 .mbtn:hover{color:var(--text)}
 .fb{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
-.chip{padding:4px 12px;border-radius:20px;font-size:12px;cursor:pointer;border:1px solid var(--border);background:var(--card2);color:var(--muted);transition:all .15s;user-select:none}
+.chip{padding:4px 12px;border-radius:20px;font-size:13px;cursor:pointer;border:1px solid var(--border);background:var(--card2);color:var(--muted);transition:all .15s;user-select:none}
 .chip:hover{border-color:var(--blue);color:var(--text)}
 .ca{background:#0c2040;border-color:#58a6ff;color:#58a6ff}
-.rt{width:100%;border-collapse:collapse;font-size:13px}
+.rt{width:100%;border-collapse:collapse;font-size:14px}
 .rt th{color:var(--muted);font-weight:500;padding:7px 10px;border-bottom:1px solid var(--border);text-align:left}
 .rt td{padding:7px 10px;border-bottom:1px solid var(--border)}
 .rt tr:hover td{background:var(--card2)}
 /* Tab3 pricing */
 .pricing-header{display:flex;gap:14px;margin-bottom:20px;flex-wrap:wrap;align-items:flex-end}
 .ptable-wrap{overflow-x:auto}
-.action-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:11px;font-weight:500}
+.action-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:500}
 .act-up{background:#2d0f0f;color:#f85149;border:1px solid #f85149}
 .act-dn{background:#0f2d1a;color:#3fb950;border:1px solid #3fb950}
 .act-na{background:#26344A;color:#8b949e;border:1px solid #334155}
 .act-org{background:#2d1f0f;color:#ffa657;border:1px solid #ffa657}
-.seg-chip{display:inline-block;background:var(--card2);border:1px solid var(--border);padding:1px 6px;border-radius:8px;font-size:10px;color:var(--muted);margin-top:2px}
-.note-text{font-size:11px;color:var(--muted);line-height:1.4}
+.seg-chip{display:inline-block;background:var(--card2);border:1px solid var(--border);padding:1px 6px;border-radius:8px;font-size:11px;color:var(--muted);margin-top:2px}
+.note-text{font-size:12px;color:var(--muted);line-height:1.4}
 .summary-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
 .sm-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px}
-.sm-lbl{font-size:11px;color:var(--muted);margin-bottom:6px}
-.sm-val{font-size:20px;font-weight:700;color:var(--red)}
-.sm-sub{font-size:11px;color:var(--muted);margin-top:3px}
+.sm-lbl{font-size:12px;color:var(--muted);margin-bottom:6px}
+.sm-val{font-size:21px;font-weight:700;color:var(--red)}
+.sm-sub{font-size:12px;color:var(--muted);margin-top:3px}
 .hidden{display:none!important}
-.ft{max-width:1600px;margin:8px auto 0;padding:18px 32px 26px;text-align:center;color:var(--muted);font-size:12px;line-height:1.8;border-top:1px solid var(--border)}
+.ft{max-width:1600px;margin:8px auto 0;padding:18px 32px 26px;text-align:center;color:var(--muted);font-size:13px;line-height:1.8;border-top:1px solid var(--border)}
 .ft a{color:var(--blue);text-decoration:none}
 .ft a:hover{text-decoration:underline}
 /* Tab5/6 */
 .peer-grp{margin-bottom:24px}
-.peer-grp-hd{font-size:15px;font-weight:700;margin-bottom:2px}
-.peer-grp-focus{font-size:12px;color:var(--muted);margin-bottom:10px}
-.grade-badge{display:inline-block;padding:2px 9px;border-radius:10px;font-size:11px;font-weight:600}
+.peer-grp-hd{font-size:16px;font-weight:700;margin-bottom:2px}
+.peer-grp-focus{font-size:13px;color:var(--muted);margin-bottom:10px}
+.grade-badge{display:inline-block;padding:2px 9px;border-radius:10px;font-size:12px;font-weight:600}
 .grade-A{background:#0f2d1a;color:#3fb950;border:1px solid #3fb950}
 .grade-B{background:#26344A;color:#58a6ff;border:1px solid #58a6ff}
 .grade-C{background:#2d0f0f;color:#f85149;border:1px solid #f85149}
 .grade-D{background:#2d1f0f;color:#ffa657;border:1px solid #ffa657}
 .grade-NA{background:#26344A;color:#8b949e;border:1px solid #334155}
-.heat-cell{display:inline-block;width:34px;text-align:center;padding:3px 0;border-radius:5px;font-size:12px;font-weight:600;color:#0F172A}
+.heat-cell{display:inline-block;width:34px;text-align:center;padding:3px 0;border-radius:5px;font-size:13px;font-weight:600;color:#0F172A}
 .heat-1{background:#3fb950}.heat-2{background:#7ee787}.heat-3{background:#ffa657}.heat-4{background:#ff7b72}.heat-5{background:#f85149;color:#fff}
-.risk-note{font-size:11px;color:var(--muted);max-width:320px}
-.strat-badge{display:inline-block;padding:2px 9px;border-radius:10px;font-size:11px;font-weight:600}
+.risk-note{font-size:12px;color:var(--muted);max-width:320px}
+.strat-badge{display:inline-block;padding:2px 9px;border-radius:10px;font-size:12px;font-weight:600}
 .strat-skim{background:#0f2d1a;color:#3fb950;border:1px solid #3fb950}
 .strat-pen{background:#0c2040;color:#58a6ff;border:1px solid #58a6ff}
 .strat-neu{background:#26344A;color:#8b949e;border:1px solid #334155}
 /* fuludata-style gauges & white tables */
 .gauge-row{display:flex;align-items:center;justify-content:space-between;gap:4px;flex-wrap:wrap;margin-bottom:10px}
 .gauge-box{flex:1;min-width:150px;text-align:center}
-.gauge-label{font-size:12.5px;color:#444;margin-bottom:4px;white-space:nowrap;cursor:help}
+.gauge-label{font-size:13.5px;color:#444;margin-bottom:4px;white-space:nowrap;cursor:help}
 .gauge-wrap{position:relative;height:96px}
-.gauge-val{position:absolute;left:0;right:0;bottom:2px;font-size:21px;font-weight:800;color:#1a1a1a}
-.gauge-minmax{display:flex;justify-content:space-between;font-size:10px;color:#999;padding:0 14%}
-.gauge-op{font-size:28px;font-weight:700;color:#333;padding:0 4px;align-self:center}
+.gauge-val{position:absolute;left:0;right:0;bottom:2px;font-size:22px;font-weight:800;color:#1a1a1a}
+.gauge-minmax{display:flex;justify-content:space-between;font-size:11px;color:#999;padding:0 14%}
+.gauge-op{font-size:29px;font-weight:700;color:#333;padding:0 4px;align-self:center}
 .fulu-wrap .rt td{color:#1a1a1a;border-bottom:1px solid #e5e5e5}
 .fulu-wrap .rt th{color:#666;border-bottom:1px solid #e5e5e5}
 .fulu-wrap .rt tr:hover td{background:#f5f7fa}
@@ -136,11 +136,11 @@ select:focus{border-color:var(--blue)}
 .fulu-top{display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:14px}
 .fulu-sel-row{display:flex;gap:16px;flex-wrap:wrap}
 .fulu-sg{display:flex;flex-direction:column;gap:4px}
-.fulu-sg label{font-size:12px;color:#888}
-.fulu-sg select{background:#fff;border:1px solid #d5d9df;color:#1a1a1a;padding:6px 10px;border-radius:6px;font-size:13px;min-width:170px}
-.fulu-title{font-size:22px;font-weight:700;color:#1a1a1a;text-align:right}
+.fulu-sg label{font-size:13px;color:#888}
+.fulu-sg select{background:#fff;border:1px solid #d5d9df;color:#1a1a1a;padding:6px 10px;border-radius:6px;font-size:14px;min-width:170px}
+.fulu-title{font-size:23px;font-weight:700;color:#1a1a1a;text-align:right}
 .fulu-hr{border:none;border-top:1px solid #e5e5e5;margin:18px 0 26px}
-.fulu-section-title{font-size:19px;font-weight:800;color:#1355d6;margin-bottom:14px}
+.fulu-section-title{font-size:20px;font-weight:800;color:#1355d6;margin-bottom:14px}
 .fulu-cards{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid #e5e5e5;border-radius:8px;overflow:hidden}
 .fulu-cards .fulu-card:nth-child(3n){border-right:none}
 .fulu-cards .fulu-card:nth-child(n+4){border-top:1px solid #e5e5e5}
@@ -148,21 +148,21 @@ select:focus{border-color:var(--blue)}
 .fulu-card[title]{cursor:help}
 .fulu-card:hover{background:#fafbfc}
 .fulu-card:last-child{border-right:none}
-.fulu-card-val{font-size:26px;font-weight:800;text-align:center;padding:18px 6px 4px;color:#1a1a1a;white-space:nowrap;letter-spacing:-.3px}
-.fulu-card-lbl{font-size:11.5px;text-align:center;color:#555;padding:0 4px 12px;border-bottom:1px solid #e5e5e5}
+.fulu-card-val{font-size:27px;font-weight:800;text-align:center;padding:18px 6px 4px;color:#1a1a1a;white-space:nowrap;letter-spacing:-.3px}
+.fulu-card-lbl{font-size:12.5px;text-align:center;color:#555;padding:0 4px 12px;border-bottom:1px solid #e5e5e5}
 .fulu-spark{height:64px;padding:6px}
-.fulu-note{font-size:11px;color:#999;margin-top:20px}
+.fulu-note{font-size:12px;color:#999;margin-top:20px}
 @media(max-width:900px){.fulu-cards{grid-template-columns:repeat(3,1fr)}}
 </style>
 </head>
 <body>
 <div class="hd">
-  <div style="font-size:26px">📊</div>
+  <div style="font-size:27px">📊</div>
   <div><h1>半導體財報儀表板</h1><p>40 家公司 · 美/台/日/歐/中 · 2022~2026 季度財報（各公司財年結算日不同，最新季度不盡相同）</p></div>
   <div class="hd-r">
     <span class="badge">🇹🇼 台股 18家</span><span class="badge">🇺🇸 美股 12家</span>
     <span class="badge">🇯🇵 日股 3家</span><span class="badge">🇪🇺 歐股 1家</span><span class="badge">🇨🇳 中股 6家</span>
-    <span class="badge badge-update">🕒 資料更新於 2026-07-20 · 季度更新</span>
+    <span class="badge badge-update">🕒 資料更新於 2026-07-21 · 季度更新</span>
   </div>
 </div>
 <div class="tabs">
@@ -204,7 +204,7 @@ select:focus{border-color:var(--blue)}
     <div class="sc"><div class="sc-lbl">毛利率</div><div class="sc-val" id="sGM">—</div><div class="sc-d" id="sGD_yoy"></div><div class="sc-d" id="sGD_qoq"></div></div>
     <div class="sc"><div class="sc-lbl">EPS</div><div class="sc-val" id="sEP">—</div><div class="sc-d" id="sED_yoy"></div><div class="sc-d" id="sED_qoq"></div></div>
   </div>
-  <div style="font-size:11px;color:var(--muted);margin:-8px 0 8px">「—」代表該季官方尚未揭露或無公開數據，非數值為零；下方趨勢圖線段中斷同理。已知資料缺口：HHGrace／Nexchip 上市前年度、西安奕材早期毛利率／EPS、Infineon Q1'22 毛利率／EPS，均為官方本身未揭露季度數字，非本站漏載。</div>
+  <div style="font-size:12px;color:var(--muted);margin:-8px 0 8px">「—」代表該季官方尚未揭露或無公開數據，非數值為零；下方趨勢圖線段中斷同理。已知資料缺口：HHGrace／Nexchip 上市前年度、西安奕材早期毛利率／EPS、Infineon Q1'22 毛利率／EPS，均為官方本身未揭露季度數字，非本站漏載。</div>
   <div class="cg">
     <div class="cc cf"><div class="ct">📦 季度營收趨勢</div><div class="cs" id="rlbl">—</div><div class="cwt"><canvas id="cRev"></canvas></div></div>
     <div class="cc"><div class="ct">💹 毛利率 (%)</div><div class="cs">Gross Margin — 季度變化</div><div class="cw"><canvas id="cGM"></canvas></div></div>
@@ -221,36 +221,36 @@ select:focus{border-color:var(--blue)}
       <div class="apanel-body show" id="apb0"></div>
     </div>
     <div class="apanel full" id="ap1">
-      <div class="apanel-hd" onclick="togglePanel(1)">
+      <div class="apanel-hd open" onclick="togglePanel(1)">
         <span class="apanel-icon">📰</span>
         <div><div class="apanel-title">法說會摘要</div><div class="apanel-sub">最近兩季法說會紀要</div></div>
         <span class="apanel-arrow">▼</span>
       </div>
-      <div class="apanel-body" id="apb1"></div>
+      <div class="apanel-body show" id="apb1"></div>
     </div>
     <div class="apanel" id="ap2">
-      <div class="apanel-hd" onclick="togglePanel(2)">
+      <div class="apanel-hd open" onclick="togglePanel(2)">
         <span class="apanel-icon">🔬</span>
         <div><div class="apanel-title" id="p3t">深度分析 1</div><div class="apanel-sub">P3 Analysis</div></div>
         <span class="apanel-arrow">▼</span>
       </div>
-      <div class="apanel-body" id="apb2"></div>
+      <div class="apanel-body show" id="apb2"></div>
     </div>
     <div class="apanel" id="ap3">
-      <div class="apanel-hd" onclick="togglePanel(3)">
+      <div class="apanel-hd open" onclick="togglePanel(3)">
         <span class="apanel-icon">🔬</span>
         <div><div class="apanel-title" id="p4t">深度分析 2</div><div class="apanel-sub">P4 Analysis</div></div>
         <span class="apanel-arrow">▼</span>
       </div>
-      <div class="apanel-body" id="apb3"></div>
+      <div class="apanel-body show" id="apb3"></div>
     </div>
     <div class="apanel full" id="ap4">
-      <div class="apanel-hd" onclick="togglePanel(4)">
+      <div class="apanel-hd open" onclick="togglePanel(4)">
         <span class="apanel-icon">🔬</span>
         <div><div class="apanel-title" id="p5t">深度分析 3</div><div class="apanel-sub">P5 Analysis</div></div>
         <span class="apanel-arrow">▼</span>
       </div>
-      <div class="apanel-body" id="apb4"></div>
+      <div class="apanel-body show" id="apb4"></div>
     </div>
   </div>
 </div>
@@ -284,7 +284,7 @@ select:focus{border-color:var(--blue)}
         <div class="ct" id="ccT">📊 毛利率比較</div>
         <div class="cs" id="ccS">選取公司後顯示折線圖</div>
         <div style="position:relative;height:360px"><canvas id="cComp"></canvas></div>
-        <div style="font-size:11px;color:var(--muted);margin-top:6px">＊財年公司已依財年結束月份換算對齊到最接近的日曆季；Qualcomm/Skyworks/Microchip/AOSL/DENSO/三菱電機的財年結束月份剛好落在日曆季界線上，換算為精確對齊；<strong>ADI、Broadcom 財年結束於 10 月底，季度本身跨越兩個日曆季（如 11~1 月、2~4 月），僅能以「佔多數月份」歸屬到最接近的日曆季，屬近似對齊</strong>。線段中斷代表該季官方尚未揭露或無公開數據，非數值為零。</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:6px">＊財年公司已依財年結束月份換算對齊到最接近的日曆季；Qualcomm/Skyworks/Microchip/AOSL/DENSO/三菱電機的財年結束月份剛好落在日曆季界線上，換算為精確對齊；<strong>ADI、Broadcom 財年結束於 10 月底，季度本身跨越兩個日曆季（如 11~1 月、2~4 月），僅能以「佔多數月份」歸屬到最接近的日曆季，屬近似對齊</strong>。線段中斷代表該季官方尚未揭露或無公開數據，非數值為零。</div>
       </div>
       <div class="panel">
         <div class="pt">最新季排行（各公司實際季度不一定相同，財年公司已標註）</div>
@@ -300,7 +300,7 @@ select:focus{border-color:var(--blue)}
   <div class="summary-cards">
     <div class="sm-card">
       <div class="sm-lbl">本輪漲價主力</div>
-      <div class="sm-val" style="font-size:15px;color:var(--orange)">ADI · NXP · Infineon · VIS · MPWR</div>
+      <div class="sm-val" style="font-size:16px;color:var(--orange)">ADI · NXP · Infineon · VIS · MPWR</div>
       <div class="sm-sub">IC 設計 + 8 吋代工廠領漲，2026 H1 全面生效</div>
     </div>
     <div class="sm-card">
@@ -338,8 +338,8 @@ select:focus{border-color:var(--blue)}
     </table>
   </div>
   <div style="margin-top:20px;padding:14px 16px;background:var(--card);border:1px solid var(--border);border-radius:12px">
-    <div style="font-size:12px;font-weight:600;color:var(--muted);margin-bottom:8px">⚠️ 資料來源說明</div>
-    <div style="font-size:12px;color:var(--muted);line-height:1.7">
+    <div style="font-size:13px;font-weight:600;color:var(--muted);margin-bottom:8px">⚠️ 資料來源說明</div>
+    <div style="font-size:13px;color:var(--muted);line-height:1.7">
       主要來源：TrendForce（2026/1）、SiliconAnalysts（2026/2）、design-reuse.com（2026/2）、各公司法說會 / IR 官網。
       漲幅部分為分銷商/分析師估算，非全為官方公告數字。查詢時間：2026-07-07。
     </div>
@@ -359,11 +359,11 @@ select:focus{border-color:var(--blue)}
   </div>
   <div class="panel" style="margin-top:18px">
     <div class="pt">🌬️ 氖氣（Neon）— EUV 雷射用氣體，無公開定期報價</div>
-    <div id="neonBox" style="font-size:13px;line-height:1.8;color:#cdd9e5"></div>
+    <div id="neonBox" style="font-size:14px;line-height:1.8;color:#cdd9e5"></div>
   </div>
   <div style="margin-top:18px;padding:14px 16px;background:var(--card);border:1px solid var(--border);border-radius:12px">
-    <div style="font-size:12px;font-weight:600;color:var(--muted);margin-bottom:8px">⚠️ 資料來源說明</div>
-    <div style="font-size:12px;color:var(--muted);line-height:1.7">
+    <div style="font-size:13px;font-weight:600;color:var(--muted);margin-bottom:8px">⚠️ 資料來源說明</div>
+    <div style="font-size:13px;color:var(--muted);line-height:1.7">
       金／銀為 macrotrends.net（LBMA/COMEX 基準）月收盤價換算季均價，屬單一來源，尚待與 LBMA／COMEX 官方數據等第二來源交叉核對；2026年金銀價格波動劇烈（金價1月一度衝上每盎司5,000美元以上歷史新高，隨後回落），單季均價僅供參考，不代表精確值或已完成覆核。鉑／鈀／銅部分季度（標示 est.）為依年均價與已知市場事件推算，非逐季精確報價。多晶矽依 TrendForce／Bernreuter／PVinsights 報導區間估算。氖氣非交易所商品，無法提供定期報價，僅列定性描述與事件性價格點。資料撰寫時間：2026-07-09，各季價格請留意撰寫時間與實際季度可能存在落差。
     </div>
   </div>
@@ -371,7 +371,7 @@ select:focus{border-color:var(--blue)}
 
 <!-- TAB 5 -->
 <div id="t4" class="content hidden">
-  <div style="margin-bottom:16px;padding:12px 16px;background:var(--card);border:1px solid var(--border);border-radius:12px;font-size:12px;color:var(--muted);line-height:1.6">
+  <div style="margin-bottom:16px;padding:12px 16px;background:var(--card);border:1px solid var(--border);border-radius:12px;font-size:13px;color:var(--muted);line-height:1.6">
     依「純代工／車用工業 IDM／IC 設計 Fabless」三組對標，呈現最新季營收(美金)、毛利率與 QoQ/YoY 變化，並附上該公司最新一筆 ASP／訂價指引(取自定價分析頁資料)。
   </div>
   <div id="peerWrap"></div>
@@ -411,7 +411,7 @@ select:focus{border-color:var(--blue)}
 
 <!-- TAB 7 -->
 <div id="t6" class="content hidden">
-  <div style="margin-bottom:16px;padding:12px 16px;background:var(--card);border:1px solid var(--border);border-radius:12px;font-size:12px;color:var(--muted);line-height:1.6" id="normMeta"></div>
+  <div style="margin-bottom:16px;padding:12px 16px;background:var(--card);border:1px solid var(--border);border-radius:12px;font-size:13px;color:var(--muted);line-height:1.6" id="normMeta"></div>
   <div class="ptable-wrap">
     <table class="rt" id="normTable">
       <thead><tr><th>公司</th><th>季度</th><th>帳面數字</th><th>一次性項目</th><th>方向</th><th>影響幅度</th><th>常續性獲利說明</th></tr></thead>
@@ -422,7 +422,7 @@ select:focus{border-color:var(--blue)}
 
 <!-- TAB 8 -->
 <div id="t7" class="content hidden">
-  <div style="margin-bottom:16px;padding:12px 16px;background:var(--card);border:1px solid var(--border);border-radius:12px;font-size:12px;color:var(--muted);line-height:1.6" id="lcMeta"></div>
+  <div style="margin-bottom:16px;padding:12px 16px;background:var(--card);border:1px solid var(--border);border-radius:12px;font-size:13px;color:var(--muted);line-height:1.6" id="lcMeta"></div>
   <div class="ptable-wrap">
     <table class="rt" id="lcTable">
       <thead><tr><th>公司</th><th>產品線</th><th>技術階段</th><th>定價策略</th><th>毛利率/趨勢</th><th>判斷依據</th></tr></thead>
@@ -450,7 +450,7 @@ select:focus{border-color:var(--blue)}
     <div class="fulu-cards" id="fuCards"></div>
     <div class="fulu-note" id="fuNote">版面設計參考 fuludata.com 財報儀表板風格；營收/毛利率/EPS 取自本站既有季度財報資料。營業利益率/稅後淨利率為 mopsfin 官方逐季數字（台股）或另外查詢補充（其他市場），EBITDA(%) 僅部分公司有資料，滑鼠移到卡片可看資料來源。大數字為所選季度的值，卡片下方小圖為所選範圍的趨勢。</div>
     <div class="fulu-section-title" style="margin-top:30px">綜合損益（瀑布圖）</div>
-    <div id="wfNote" style="font-size:12px;color:#888;margin-bottom:14px"></div>
+    <div id="wfNote" style="font-size:13px;color:#888;margin-bottom:14px"></div>
     <div style="position:relative;height:380px"><canvas id="cWaterfall"></canvas></div>
     <div class="fulu-note">簡化版：因資料庫未拆分推銷/管理/研發費用明細，D「營業費用」為三項合併；因無稅前淨利與所得稅單獨數字，F「業外收支＋所得稅」為淨額合併。與上方公司/季度選擇器連動。</div>
   </div>
@@ -468,7 +468,7 @@ select:focus{border-color:var(--blue)}
     </div>
     <hr class="fulu-hr">
     <div class="fulu-section-title">II. 經營能力</div>
-    <div id="ccNote" style="font-size:12px;color:#888;margin-bottom:14px"></div>
+    <div id="ccNote" style="font-size:13px;color:#888;margin-bottom:14px"></div>
     <div class="gauge-row" id="ccGauges">
       <div class="gauge-box"><div class="gauge-label" title="CCC = 平均銷貨天數(DSI) + 平均收現天數(DSO) − 平均付款天數(DPO)。天數越短，代表資金從投入到收回的循環越快。">現金循環週期 (CCC) ⓘ</div><div class="gauge-wrap"><canvas id="gCCC"></canvas><div class="gauge-val" id="gvCCC">—</div></div><div class="gauge-minmax"><span>0</span><span id="gmCCC"></span></div></div>
       <div class="gauge-op">=</div>
@@ -479,7 +479,7 @@ select:focus{border-color:var(--blue)}
       <div class="gauge-box"><div class="gauge-label" title="DPO(Days Payable Outstanding) = 應付帳款 ÷ 營業成本 × 天數。代表平均要多少天才需要付款給供應商，天數越長代表議價力/資金運用彈性越大。">平均付款天數 (DPO) ⓘ</div><div class="gauge-wrap"><canvas id="gDPO"></canvas><div class="gauge-val" id="gvDPO">—</div></div><div class="gauge-minmax"><span>0</span><span id="gmDPO"></span></div></div>
     </div>
     <div class="fulu-section-title" style="margin-top:30px">現金流量</div>
-    <div id="cfNote" style="font-size:12px;color:#888;margin-bottom:14px"></div>
+    <div id="cfNote" style="font-size:13px;color:#888;margin-bottom:14px"></div>
     <div style="position:relative;height:280px"><canvas id="cCF"></canvas></div>
     <div class="fulu-note">營業／投資／籌資活動之淨現金流量（US$M），台股18家為 mopsfin 官方逐季數字（原始單位新台幣仟元換算）；其他市場公司暫無現金流量資料。</div>
   </div>
@@ -497,14 +497,14 @@ select:focus{border-color:var(--blue)}
     </div>
     <hr class="fulu-hr">
     <div class="fulu-section-title">III. 財務結構</div>
-    <div id="fsNote" style="font-size:12px;color:#888;margin-bottom:14px"></div>
+    <div id="fsNote" style="font-size:13px;color:#888;margin-bottom:14px"></div>
     <div class="gauge-row" id="fsGauges">
       <div class="gauge-box"><div class="gauge-label">負債佔資產比率</div><div class="gauge-wrap"><canvas id="gDebt"></canvas><div class="gauge-val" id="gvDebt">—</div></div><div class="gauge-minmax"><span>0%</span><span>100%</span></div></div>
       <div class="gauge-box"><div class="gauge-label">流動比率</div><div class="gauge-wrap"><canvas id="gCur"></canvas><div class="gauge-val" id="gvCur">—</div></div><div class="gauge-minmax"><span>0%</span><span id="gmCur"></span></div></div>
       <div class="gauge-box"><div class="gauge-label">速動比率</div><div class="gauge-wrap"><canvas id="gQui"></canvas><div class="gauge-val" id="gvQui">—</div></div><div class="gauge-minmax"><span>0%</span><span id="gmQui"></span></div></div>
     </div>
     <div class="fulu-section-title" style="margin-top:30px">資產負債表</div>
-    <div id="bsNote" style="font-size:12px;color:#888;margin-bottom:14px"></div>
+    <div id="bsNote" style="font-size:13px;color:#888;margin-bottom:14px"></div>
     <div style="position:relative;height:150px"><canvas id="cBS"></canvas></div>
     <div class="ptable-wrap" style="margin-top:12px">
       <table class="rt" id="bsTable">
@@ -1075,7 +1075,7 @@ function renderComp(){
     return{name:c.name,mkt:c.market,val:lv,q:lq,cur:c.currency.replace('M','').trim()};
   }).filter(r=>r.val!=null).sort((a,b)=>b.val-a.val);
   document.getElementById('rBody').innerHTML=rows.map((r,i)=>
-    '<tr><td style="color:var(--muted);font-size:12px">'+(i+1)+'</td><td>'+r.name+'</td><td><span style="color:'+(MC[r.mkt]||'#888')+'">'+r.mkt+'</span></td><td style="color:var(--muted);font-size:12px">'+esc(r.q)+'</td><td>'+(curM==='grossMargin'?r.val.toFixed(1)+'%':curM==='revenueUSD'?r.val.toLocaleString():r.val.toFixed(2)+' <span style="color:var(--muted);font-size:11px">'+esc(r.cur)+'</span>')+'</td></tr>'
+    '<tr><td style="color:var(--muted);font-size:13px">'+(i+1)+'</td><td>'+r.name+'</td><td><span style="color:'+(MC[r.mkt]||'#888')+'">'+r.mkt+'</span></td><td style="color:var(--muted);font-size:13px">'+esc(r.q)+'</td><td>'+(curM==='grossMargin'?r.val.toFixed(1)+'%':curM==='revenueUSD'?r.val.toLocaleString():r.val.toFixed(2)+' <span style="color:var(--muted);font-size:12px">'+esc(r.cur)+'</span>')+'</td></tr>'
   ).join('');
   document.getElementById('ccS').textContent='顯示 '+sel.length+' 家公司'+(curM==='eps'?'（EPS為各公司原幣，幣別不同，數值不可直接跨公司比較）':'');
 }
@@ -1121,7 +1121,7 @@ function renderPricing(){
   }
   document.getElementById('priceBody').innerHTML=rows.map(r=>
     '<tr><td style="font-weight:500">'+esc(r.co)+'</td>'+
-    '<td style="color:var(--blue);font-size:12px">'+esc(r.quarter)+'</td>'+
+    '<td style="color:var(--blue);font-size:13px">'+esc(r.quarter)+'</td>'+
     '<td><span class="action-badge '+actClass(r.action)+'">'+esc(r.action)+'</span></td>'+
     '<td style="font-weight:500;color:var(--orange)">'+esc(r.magnitude)+'</td>'+
     '<td><div>'+esc(r.segment)+'</div></td>'+
@@ -1136,7 +1136,7 @@ function initMaterialSelect(){
     const o=document.createElement('option');o.value=m.metal;o.textContent=m.nameZh+' ('+m.metal+')';sel.appendChild(o);
   });
   document.getElementById('neonBox').innerHTML=NEON.map(n=>
-    '<p style="margin-bottom:8px"><b style="color:var(--purple)">'+esc(n.q)+'：</b>'+esc(n.v)+' <span style="color:var(--muted);font-size:11px">（'+esc(n.src)+'）</span></p>'
+    '<p style="margin-bottom:8px"><b style="color:var(--purple)">'+esc(n.q)+'：</b>'+esc(n.v)+' <span style="color:var(--muted);font-size:12px">（'+esc(n.src)+'）</span></p>'
   ).join('');
 }
 function renderMaterial(){
@@ -1179,7 +1179,7 @@ function renderPeer(){
       const pr=latestPricing(name);
       const aspTxt=pr?('<span class="action-badge '+actClass(pr.action)+'">'+esc(pr.action)+'</span> '+esc(pr.magnitude)+'<div class="note-text">'+esc(pr.quarter)+'</div>'):'<span style="color:var(--muted)">無資料</span>';
       html+='<tr><td style="font-weight:500">'+esc(name)+'</td><td><span style="color:'+(MC[c.market]||'#888')+'">'+c.market+'</span></td>'+
-        '<td style="color:var(--blue);font-size:12px">'+(c.quarters[pIdx]||'—')+'</td>'+
+        '<td style="color:var(--blue);font-size:13px">'+(c.quarters[pIdx]||'—')+'</td>'+
         '<td>'+(rq.last!=null?rq.last.toLocaleString():'—')+'</td>'+
         '<td>'+(gq.last!=null?gq.last.toFixed(1)+'%':'—')+'</td>'+
         '<td class="'+(gq.qoq>=0?'up':'dn')+'">'+fmtPct(gq.qoq)+'</td>'+
@@ -1245,7 +1245,7 @@ function renderNormEarn(){
   document.getElementById('normMeta').textContent=NORMEARN._meta;
   document.getElementById('normBody').innerHTML=NORMEARN.items.map(it=>
     '<tr><td style="font-weight:500">'+esc(it.company)+'</td>'+
-    '<td style="color:var(--blue);font-size:12px">'+esc(it.quarter)+'</td>'+
+    '<td style="color:var(--blue);font-size:13px">'+esc(it.quarter)+'</td>'+
     '<td>'+esc(it.reportedMetric)+'</td>'+
     '<td>'+esc(it.oneTimeItem)+'</td>'+
     '<td><span class="action-badge '+(it.direction==='positive'?'act-up':'act-dn')+'">'+(it.direction==='positive'?'正向':'負向')+'</span></td>'+
@@ -1379,7 +1379,7 @@ function renderWaterfall(c,L){
     if(!hasOp&&!hasNet)why='目前完全沒有查到這家公司的營業利益率／稅後淨利率資料。';
     else if(!hasNet)why='目前完全沒有查到這家公司的稅後淨利率資料（只有部分季度的營業利益率）。';
     else if(!hasOp)why='目前完全沒有查到這家公司的營業利益率資料。';
-    document.getElementById('wfNote').innerHTML='<div style="padding:16px 18px;background:#f7f8fa;border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;font-size:13px;line-height:1.6">📊 暫無法顯示綜合損益瀑布圖<br><span style="font-size:12px">'+esc(why)+'</span></div>';
+    document.getElementById('wfNote').innerHTML='<div style="padding:16px 18px;background:#f7f8fa;border:1px dashed #cbd5e1;border-radius:8px;color:#64748b;font-size:14px;line-height:1.6">📊 暫無法顯示綜合損益瀑布圖<br><span style="font-size:13px">'+esc(why)+'</span></div>';
     return;
   }
   document.getElementById('wfNote').textContent='季度：'+c.quarters[L]+'，單位 US$M（比率來源：'+extra.source+'）';
