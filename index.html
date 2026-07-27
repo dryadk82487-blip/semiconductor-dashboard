@@ -177,8 +177,8 @@ select:focus{border-color:var(--blue)}
   <div class="tab" onclick="switchTab(8)">💹 獲利能力</div>
   <div class="tab" onclick="switchTab(9)">🔄 經營能力</div>
   <div class="tab" onclick="switchTab(10)">🏗️ 財務結構</div>
-  <div class="tab" onclick="switchTab(11)">🗓️ 財年對照</div>
-  <div class="tab" onclick="switchTab(12)">🌐 終端市場需求</div>
+  <div class="tab" onclick="switchTab(11)">🌐 終端市場需求</div>
+  <div class="tab" onclick="switchTab(12)">🗓️ 財年對照</div>
 </div>
 
 <!-- TAB 1 -->
@@ -884,7 +884,7 @@ function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').
 
 function switchTab(i){
   document.querySelectorAll('.tab').forEach((t,j)=>t.classList.toggle('active',i===j));
-  ['t0','t1','t2','t3','t4','t5','t6','t7','t8','t9','t10','t11','t12'].forEach((id,j)=>document.getElementById(id).classList.toggle('hidden',i!==j));
+  ['t0','t1','t2','t3','t4','t5','t6','t7','t8','t9','t10','t12','t11'].forEach((id,j)=>document.getElementById(id).classList.toggle('hidden',i!==j));
   if(i===1)renderComp();
   if(i===2)renderPricing();
   if(i===3)renderMaterial();
@@ -895,8 +895,8 @@ function switchTab(i){
   if(i===8)renderFulu();
   if(i===9)renderCCC();
   if(i===10)renderFinStruct();
-  if(i===11)fyShowSlide(fyCurrentSlide);
-  if(i===12)renderEndMarket();
+  if(i===11)renderEndMarket();
+  if(i===12)fyShowSlide(fyCurrentSlide);
 }
 
 function togglePanel(i){
