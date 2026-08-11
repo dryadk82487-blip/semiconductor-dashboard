@@ -8,7 +8,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
-:root{--bg:#141B3D;--card:#1E2657;--card2:#262F6B;--border:#38427E;--text:#F1F5F9;--muted:#9DACD6;--blue:#f9bf13;--green:#3fb950;--orange:#ffa657;--red:#f85149;--purple:#bc8cff}
+:root{--bg:#F4F6FB;--card:#FFFFFF;--card2:#EEF1F8;--border:#DCE1EE;--text:#1A2140;--muted:#64748B;--blue:#202b66;--gold:#f9bf13;--green:#15803d;--orange:#b45309;--red:#dc2626;--purple:#7c3aed}
 *{margin:0;padding:0;box-sizing:border-box}
 body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh}
 .hd{background:linear-gradient(135deg,#262F6B,#141B3D);border-bottom:1px solid var(--border);padding:18px 32px;display:flex;align-items:center;gap:14px}
@@ -18,7 +18,7 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,san
 .badge-update{background:rgba(249,191,19,.14);border-color:rgba(249,191,19,.4);color:#FDE68A}
 .tabs{display:flex;padding:0 32px;background:var(--card);border-bottom:1px solid var(--border)}
 .tab{padding:13px 22px;cursor:pointer;font-size:15px;font-weight:500;color:var(--muted);border-bottom:2px solid transparent;transition:all .2s}
-.tab.active{color:var(--blue);border-bottom-color:var(--blue)}
+.tab.active{color:var(--blue);border-bottom-color:var(--gold)}
 .tab:hover:not(.active){color:var(--text)}
 .content{padding:22px 32px;max-width:1600px;margin:0 auto}
 .sel-row{display:flex;gap:14px;margin-bottom:18px;align-items:flex-end;flex-wrap:wrap}
@@ -55,7 +55,7 @@ select:focus{border-color:var(--blue)}
 .apanel-sub{font-size:12px;color:var(--muted)}
 .apanel-arrow{font-size:13px;color:var(--muted);transition:transform .2s}
 .apanel-hd.open .apanel-arrow{transform:rotate(180deg)}
-.apanel-body{display:none;padding:14px 16px;font-size:14px;line-height:1.7;color:#cdd9e5}
+.apanel-body{display:none;padding:14px 16px;font-size:14px;line-height:1.7;color:#3B4863}
 .apanel-body.show{display:block}
 .apanel-body p{margin-bottom:10px}
 .bullet-list{list-style:none;display:flex;flex-direction:column;gap:6px}
@@ -80,7 +80,7 @@ select:focus{border-color:var(--blue)}
 .fb{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px;align-items:center}
 .chip{padding:4px 12px;border-radius:20px;font-size:13px;cursor:pointer;border:1px solid var(--border);background:var(--card2);color:var(--muted);transition:all .15s;user-select:none}
 .chip:hover{border-color:var(--blue);color:var(--text)}
-.ca{background:rgba(249,191,19,.12);border-color:#f9bf13;color:#f9bf13}
+.ca{background:var(--gold);border-color:var(--gold);color:#1A2140;font-weight:600}
 .rt{width:100%;border-collapse:collapse;font-size:14px}
 .rt th{color:var(--muted);font-weight:500;padding:7px 10px;border-bottom:1px solid var(--border);text-align:left}
 .rt td{padding:7px 10px;border-bottom:1px solid var(--border)}
@@ -89,10 +89,10 @@ select:focus{border-color:var(--blue)}
 .pricing-header{display:flex;gap:14px;margin-bottom:20px;flex-wrap:wrap;align-items:flex-end}
 .ptable-wrap{overflow-x:auto}
 .action-badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:500}
-.act-up{background:#2d0f0f;color:#f85149;border:1px solid #f85149}
-.act-dn{background:#0f2d1a;color:#3fb950;border:1px solid #3fb950}
-.act-na{background:#262F6B;color:#9DACD6;border:1px solid #38427E}
-.act-org{background:#2d1f0f;color:#ffa657;border:1px solid #ffa657}
+.act-up{background:#FDECEC;color:#dc2626;border:1px solid #dc2626}
+.act-dn{background:#E8F7EC;color:#15803d;border:1px solid #15803d}
+.act-na{background:var(--card2);color:var(--muted);border:1px solid var(--border)}
+.act-org{background:#FDF3E2;color:#b45309;border:1px solid #b45309}
 .seg-chip{display:inline-block;background:var(--card2);border:1px solid var(--border);padding:1px 6px;border-radius:8px;font-size:11px;color:var(--muted);margin-top:2px}
 .note-text{font-size:12px;color:var(--muted);line-height:1.4}
 .summary-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:20px}
@@ -109,18 +109,18 @@ select:focus{border-color:var(--blue)}
 .peer-grp-hd{font-size:16px;font-weight:700;margin-bottom:2px}
 .peer-grp-focus{font-size:13px;color:var(--muted);margin-bottom:10px}
 .grade-badge{display:inline-block;padding:2px 9px;border-radius:10px;font-size:12px;font-weight:600}
-.grade-A{background:#0f2d1a;color:#3fb950;border:1px solid #3fb950}
-.grade-B{background:#262F6B;color:#58a6ff;border:1px solid #58a6ff}
-.grade-C{background:#2d0f0f;color:#f85149;border:1px solid #f85149}
-.grade-D{background:#2d1f0f;color:#ffa657;border:1px solid #ffa657}
-.grade-NA{background:#262F6B;color:#9DACD6;border:1px solid #38427E}
+.grade-A{background:#E8F7EC;color:#15803d;border:1px solid #15803d}
+.grade-B{background:#E8F0FE;color:#1d4ed8;border:1px solid #1d4ed8}
+.grade-C{background:#FDECEC;color:#dc2626;border:1px solid #dc2626}
+.grade-D{background:#FDF3E2;color:#b45309;border:1px solid #b45309}
+.grade-NA{background:var(--card2);color:var(--muted);border:1px solid var(--border)}
 .heat-cell{display:inline-block;width:34px;text-align:center;padding:3px 0;border-radius:5px;font-size:13px;font-weight:600;color:#141B3D}
 .heat-1{background:#3fb950}.heat-2{background:#7ee787}.heat-3{background:#ffa657}.heat-4{background:#ff7b72}.heat-5{background:#f85149;color:#fff}
 .risk-note{font-size:12px;color:var(--muted);max-width:320px}
 .strat-badge{display:inline-block;padding:2px 9px;border-radius:10px;font-size:12px;font-weight:600}
-.strat-skim{background:#0f2d1a;color:#3fb950;border:1px solid #3fb950}
-.strat-pen{background:#0c2040;color:#58a6ff;border:1px solid #58a6ff}
-.strat-neu{background:#262F6B;color:#9DACD6;border:1px solid #38427E}
+.strat-skim{background:#E8F7EC;color:#15803d;border:1px solid #15803d}
+.strat-pen{background:#E8F0FE;color:#1d4ed8;border:1px solid #1d4ed8}
+.strat-neu{background:var(--card2);color:var(--muted);border:1px solid var(--border)}
 /* fuludata-style gauges & white tables */
 .gauge-row{display:flex;align-items:center;justify-content:space-between;gap:4px;flex-wrap:wrap;margin-bottom:10px}
 .gauge-box{flex:1;min-width:150px;text-align:center}
@@ -163,7 +163,7 @@ select:focus{border-color:var(--blue)}
   <div class="hd-r">
     <span class="badge">🇹🇼 台股 18家</span><span class="badge">🇺🇸 美股 12家</span>
     <span class="badge">🇯🇵 日股 3家</span><span class="badge">🇪🇺 歐股 1家</span><span class="badge">🇨🇳 中股 6家</span>
-    <span class="badge badge-update">🕒 資料更新於 2026-08-10 · 季度更新</span>
+    <span class="badge badge-update">🕒 資料更新於 2026-08-11 · 季度更新</span>
   </div>
 </div>
 <div class="tabs">
@@ -348,7 +348,7 @@ select:focus{border-color:var(--blue)}
     <div style="font-size:13px;font-weight:600;color:var(--muted);margin-bottom:8px">⚠️ 資料來源說明</div>
     <div style="font-size:13px;color:var(--muted);line-height:1.7">
       主要來源：TrendForce（2026/1）、SiliconAnalysts（2026/2）、design-reuse.com（2026/2）、各公司法說會 / IR 官網。
-      漲幅部分為分銷商/分析師估算，非全為官方公告數字。查詢時間：2026-08-10。
+      漲幅部分為分銷商/分析師估算，非全為官方公告數字。查詢時間：2026-08-11。
     </div>
   </div>
 </div>
@@ -366,7 +366,7 @@ select:focus{border-color:var(--blue)}
   </div>
   <div class="panel" style="margin-top:18px">
     <div class="pt">🌬️ 氖氣（Neon）— EUV 雷射用氣體，無公開定期報價</div>
-    <div id="neonBox" style="font-size:14px;line-height:1.8;color:#cdd9e5"></div>
+    <div id="neonBox" style="font-size:14px;line-height:1.8;color:#3B4863"></div>
   </div>
   <div style="margin-top:18px;padding:14px 16px;background:var(--card);border:1px solid var(--border);border-radius:12px">
     <div style="font-size:13px;font-weight:600;color:var(--muted);margin-bottom:8px">⚠️ 資料來源說明</div>
@@ -889,7 +889,7 @@ const NEON=[
 const MC={'台股':'#58a6ff','美股':'#f85149','日股':'#fb8c00','歐股':'#3fb950','中股':'#bc8cff'};
 const PAL=['#58a6ff','#f85149','#3fb950','#fb8c00','#bc8cff','#ffa657','#79c0ff','#ff7b72','#a5d6ff','#d2a8ff','#7ee787','#ffa198','#e3b341','#56d364','#ff9b72','#b083f0','#40c4aa','#ef5350','#42a5f5','#ab47bc','#26c6da','#8d6e63','#66bb6a','#ec407a','#26a69a','#ff7043','#5c6bc0','#d4e157','#78909c','#29b6f6','#9ccc65','#ffa726','#26c6da','#7e57c2','#43a047'];
 if(typeof ChartDataLabels!=='undefined')Chart.register(ChartDataLabels);
-const BASE={responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{backgroundColor:'#262F6B',borderColor:'#38427E',borderWidth:1,titleColor:'#F1F5F9',bodyColor:'#9DACD6',padding:10},datalabels:{display:false}},scales:{x:{grid:{color:'rgba(56,66,126,.28)'},ticks:{color:'#9DACD6',font:{size:11}}},y:{grid:{color:'rgba(56,66,126,.28)'},ticks:{color:'#9DACD6',font:{size:11}}}}};
+const BASE={responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{backgroundColor:'#FFFFFF',borderColor:'#DCE1EE',borderWidth:1,titleColor:'#1A2140',bodyColor:'#64748B',padding:10},datalabels:{display:false}},scales:{x:{grid:{color:'rgba(26,33,64,.08)'},ticks:{color:'#64748B',font:{size:11}}},y:{grid:{color:'rgba(26,33,64,.08)'},ticks:{color:'#64748B',font:{size:11}}}}};
 const charts={};
 function dc(id){if(charts[id]){charts[id].destroy();delete charts[id];}}
 
@@ -990,17 +990,17 @@ function loadCo(){
   dc('rev');
   charts['rev']=new Chart(document.getElementById('cRev').getContext('2d'),{
     type:'bar',data:{labels:qs,datasets:[{data:rv,backgroundColor:col+'44',borderColor:col,borderWidth:2,borderRadius:4,hoverBackgroundColor:col+'99'}]},
-    options:{...BASE,layout:{padding:{top:26,left:16,right:16}},plugins:{...BASE.plugins,tooltip:{...BASE.plugins.tooltip,callbacks:{label:ctx=>' '+(ctx.parsed.y||0).toLocaleString()+' US$M'}},datalabels:{display:dlShow,anchor:'end',align:'top',offset:4,clamp:true,clip:false,color:'#F1F5F9',font:{weight:'bold',size:12},formatter:v=>v.toLocaleString()}}}
+    options:{...BASE,layout:{padding:{top:26,left:16,right:16}},plugins:{...BASE.plugins,tooltip:{...BASE.plugins.tooltip,callbacks:{label:ctx=>' '+(ctx.parsed.y||0).toLocaleString()+' US$M'}},datalabels:{display:dlShow,anchor:'end',align:'top',offset:4,clamp:true,clip:false,color:'#1A2140',font:{weight:'bold',size:12},formatter:v=>v.toLocaleString()}}}
   });
   dc('gm');
   charts['gm']=new Chart(document.getElementById('cGM').getContext('2d'),{
-    type:'line',data:{labels:qs,datasets:[{data:gm,borderColor:'#3fb950',backgroundColor:'rgba(63,185,80,.12)',borderWidth:2.5,pointRadius:4,pointHoverRadius:6,fill:true,tension:.35}]},
-    options:{...BASE,layout:{padding:{top:26,left:16,right:16}},plugins:{...BASE.plugins,tooltip:{...BASE.plugins.tooltip,callbacks:{label:ctx=>' '+ctx.parsed.y.toFixed(1)+'%'}},datalabels:{display:dlShow,anchor:'end',align:'top',offset:6,clamp:true,clip:false,color:'#3fb950',font:{weight:'bold',size:12},formatter:v=>v.toFixed(1)+'%'}},scales:{...BASE.scales,y:{...BASE.scales.y,ticks:{...BASE.scales.y.ticks,callback:v=>v+'%'}}}}
+    type:'line',data:{labels:qs,datasets:[{data:gm,borderColor:'#15803d',backgroundColor:'rgba(21,128,61,.10)',borderWidth:2.5,pointRadius:4,pointHoverRadius:6,fill:true,tension:.35}]},
+    options:{...BASE,layout:{padding:{top:26,left:16,right:16}},plugins:{...BASE.plugins,tooltip:{...BASE.plugins.tooltip,callbacks:{label:ctx=>' '+ctx.parsed.y.toFixed(1)+'%'}},datalabels:{display:dlShow,anchor:'end',align:'top',offset:6,clamp:true,clip:false,color:'#15803d',font:{weight:'bold',size:12},formatter:v=>v.toFixed(1)+'%'}},scales:{...BASE.scales,y:{...BASE.scales.y,ticks:{...BASE.scales.y.ticks,callback:v=>v+'%'}}}}
   });
   dc('eps');
   charts['eps']=new Chart(document.getElementById('cEPS').getContext('2d'),{
-    type:'line',data:{labels:qs,datasets:[{data:ep,borderColor:'#ffa657',backgroundColor:'rgba(255,166,87,.12)',borderWidth:2.5,pointRadius:4,pointHoverRadius:6,fill:true,tension:.35}]},
-    options:{...BASE,layout:{padding:{top:26,left:16,right:16}},plugins:{...BASE.plugins,datalabels:{display:dlShow,anchor:'end',align:'top',offset:6,clamp:true,clip:false,color:'#ffa657',font:{weight:'bold',size:12},formatter:v=>v.toFixed(2)}}}
+    type:'line',data:{labels:qs,datasets:[{data:ep,borderColor:'#b45309',backgroundColor:'rgba(180,83,9,.10)',borderWidth:2.5,pointRadius:4,pointHoverRadius:6,fill:true,tension:.35}]},
+    options:{...BASE,layout:{padding:{top:26,left:16,right:16}},plugins:{...BASE.plugins,datalabels:{display:dlShow,anchor:'end',align:'top',offset:6,clamp:true,clip:false,color:'#b45309',font:{weight:'bold',size:12},formatter:v=>v.toFixed(2)}}}
   });
 
   // Analysis panels
@@ -1110,7 +1110,7 @@ function renderComp(){
   const suf=curM==='grossMargin'?'%':'';
   charts['comp']=new Chart(document.getElementById('cComp').getContext('2d'),{
     type:'line',data:{labels:allQ,datasets:ds},
-    options:{...BASE,plugins:{...BASE.plugins,legend:{display:true,position:'top',labels:{color:'#9DACD6',boxWidth:12,font:{size:11}}},
+    options:{...BASE,plugins:{...BASE.plugins,legend:{display:true,position:'top',labels:{color:'#64748B',boxWidth:12,font:{size:11}}},
       tooltip:{...BASE.plugins.tooltip,callbacks:{label:ctx=>{
         if(ctx.parsed.y==null)return ' '+ctx.dataset.label+': N/A';
         const cObj=sel.find(x=>x.name===ctx.dataset.label);
@@ -1197,8 +1197,8 @@ function renderMaterial(){
   const qs=m.data.map(d=>d.quarter),vs=m.data.map(d=>d.price);
   dc('mat');
   charts['mat']=new Chart(document.getElementById('cMat').getContext('2d'),{
-    type:'line',data:{labels:qs,datasets:[{data:vs,borderColor:'#bc8cff',backgroundColor:'rgba(188,140,255,.12)',borderWidth:2.5,pointRadius:4,pointHoverRadius:6,fill:true,tension:.3}]},
-    options:{...BASE,layout:{padding:{top:26,left:16,right:16}},plugins:{...BASE.plugins,tooltip:{...BASE.plugins.tooltip,callbacks:{label:ctx=>' '+ctx.parsed.y+' '+m.unit}},datalabels:{display:ctx=>ctx.dataset.data[ctx.dataIndex]!=null,anchor:'end',align:'top',offset:6,clamp:true,clip:false,color:'#bc8cff',font:{weight:'bold',size:12},formatter:v=>v.toLocaleString(undefined,{maximumFractionDigits:2})}}}
+    type:'line',data:{labels:qs,datasets:[{data:vs,borderColor:'#7c3aed',backgroundColor:'rgba(124,58,237,.10)',borderWidth:2.5,pointRadius:4,pointHoverRadius:6,fill:true,tension:.3}]},
+    options:{...BASE,layout:{padding:{top:26,left:16,right:16}},plugins:{...BASE.plugins,tooltip:{...BASE.plugins.tooltip,callbacks:{label:ctx=>' '+ctx.parsed.y+' '+m.unit}},datalabels:{display:ctx=>ctx.dataset.data[ctx.dataIndex]!=null,anchor:'end',align:'top',offset:6,clamp:true,clip:false,color:'#7c3aed',font:{weight:'bold',size:12},formatter:v=>v.toLocaleString(undefined,{maximumFractionDigits:2})}}}
   });
 }
 
